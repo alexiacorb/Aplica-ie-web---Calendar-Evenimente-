@@ -1,0 +1,11 @@
+table{
+    background-image: linear-gradient(rgb(0,0,0,0.5)),url("evenimente.jpg");
+}
+td{
+    align-items: center;
+}
+td a{
+    color:white;
+    text-decoration: none;
+    display: flex;
+}

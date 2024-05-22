@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li> <img src="logo.png" alt="Logo" width="60" height="50"> </li>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Evenimente.html">Evenimente</a></li>
+            <li><a class="active"  href="Login.html">Login</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <div class="login">
+        <form action="inregistrare.php" method="post">
+            <h3>Inregistrare</h3>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username">
+            <br>
+            <br>
+            <br>
+            <label for="password">Parola</label>
+            <input type="password" id="password" name="password">
+            <br>
+            <br>
+            <br>
+            <label for="repetapassword">Repeta parola</label>
+            <input type="password" id="repetapassword" name="repetapassword">
+            <br>
+            <button type="submit" class="conect">Înregistrare</button>            
+        </form>
+    </div>
+</body>
+</html>

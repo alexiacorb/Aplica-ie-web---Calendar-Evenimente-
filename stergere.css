@@ -1,0 +1,157 @@
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("evenimente.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #ffffff;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #c11373;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+    padding: 1em;
+  }
+  
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+  }
+  
+ .dropdown:hover .dropbtn {
+    background-color: #c11373;
+  }
+  
+  .meniu-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .meniu-dropdown a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .meniu-dropdown a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .meniu-dropdown {
+    display: block;
+  } 
+
+
+
+.calendar{
+    width: 800px; 
+    margin: 4%; 
+    height: 80%;
+    background-color: rgba(73, 70, 70, 0.5);
+    border:1px solid #ffffff;
+    color: #ffffff;
+    text-align: center;
+}
+.calendar-titlu{
+    text-align: center;
+    padding: auto;
+}
+.butoane{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+    
+}
+.butonc{
+    background-color: #f1eaee;
+    color: #000000;
+}
+table {
+    margin-top: 5%;
+    table-layout: auto;
+    width: 100%;
+    border-spacing: 3%;
+}
+.weekdays{
+    width: 91%;
+    align-items: center;
+    list-style-type: none;
+}
+.calendar-body{
+    margin: 1%;
+}
+.weekdays li{
+    width:calc(100% / 7);
+
+}
+.calendar-date {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.data {
+    width: calc(90%/7);
+    padding-bottom: 5%;
+    border: 1px solid rgb(255, 255, 255);
+    color: #f8f5f7;
+}
+.evenimente{
+    margin: 10%;
+    width: 200px;    
+    position: relative;
+    color: #fffbfd;
+    text-align: center;
+}
+.event{
+    width: 300px;
+    height: 400px;
+    padding: 5%;
+    background-color: rgba(12, 11, 11, 0.1) ;
+    border: 1px solid #f8f6f7 ;
+}
+.form{
+    margin-left: 15% ;
+    color:#c11373;
+    align-items: center;
+    justify-content: center;
+}
+.cautare{
+    width: 150px;
+    background-color: #333;
+    margin-top: 1%;
+    float:right;
+  }
+a{
+    color: white;
+}

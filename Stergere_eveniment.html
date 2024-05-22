@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stergere_eveniment</title>
+    <link rel="stylesheet" href="stergere.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li> <img  src="logo.png" alt="Logo" width="60" height="50"> </li>
+            <li><a class="active" href="Home.html">Home</a></li>
+            <div class="dropdown">
+                <a class="dropbtn">Evenimente</a>
+                <div class="meniu-dropdown">
+                    <a href="Evenimente.html">Evenimente</a>
+                    <a href="Stergere_eveniment.html">Stergere_eveniment</a>
+                    <a href="Editare_evenimente.html">Editare eveniment</a>
+                </div>
+            </div>
+           
+            <li><a href="Login.html">Login</a></li>
+        </ul>
+    </nav>
+    <table>
+        <tr>
+            <td >
+                <div class="calendar">
+                    <div class="calendar-titlu">
+                        <h3 id="luna"></h3>
+                    </div>
+                    <div class="butoane">
+                        <button class="butonc" onclick="calendar_precedent()">Luna precedenta</button>
+                        <button class="butonc" onclick="calendar_urmator()">Luna urmatoare</button>
+                    </div>
+                    
+                    <div class="calendar-body">
+                        <ul class="weekdays">
+                            <li>Luni</li>
+                            <li>Marti</li>
+                            <li>Miercuri</li>
+                            <li>Joi</li>
+                            <li>Vineri</li>
+                            <li>Sambata</li>
+                            <li>Duminica</li>
+                       </ul>
+                         <div id="date" class="calendar-date"></div>    
+                    </div>    
+                </div>
+                
+                
+            </td>
+            <td>
+                <div class="event">
+                    <div class="evenimente">
+                        <h3>Stergeti evenimente</h3>
+                    </div>
+                    <div class="form">
+                        <form action="stergere.php" method="post">
+                            <label for="zi"></label>
+                            <input type="text" name="zi" id="zi" placeholder="data">
+                            <br>
+                            <br>
+                            <label for="luna"></label>
+                            <input type="number" name="luna" id="luna" placeholder="luna">
+                            <br>
+                            <br>
+                            <label for="an"></label>
+                            <input type="number" name="an" id="an" placeholder="an">
+                            <br>
+                            <br>
+                            <label for="inceput"></label>
+                            <input type="number" name="inceput" id="inceput" placeholder="ora de inceput">
+                            <br>
+                            <br>
+                            <label for="sfarsit"></label>
+                            <input type="number" name="sfarsit" id="sfarsit" placeholder="ora de sfarsit">
+                            <br>
+                            <br>
+                            <label for="nume"></label>
+                            <input type="text" name="nume" id="nume" placeholder="nume eveniment">
+                            <br>
+                            <br>
+                            <button type="submit" onclick="validare()" >Stergeti eveniment</button>
+                            
+                        </form>
+                    </div>
+                </div>
+                <script>
+                    function validare() {
+                        const zi = parseInt(document.getElementById("zi").value);
+                        const luna = parseInt(document.getElementById("luna").value);
+                        const an = parseInt(document.getElementById("an").value);
+                        const numeEveniment = document.getElementById("event").value;
+                
+                        if (luna > 12 || luna < 1 || isNaN(luna)) {
+                            alert("Introduceti o luna valida");
+                            return false;
+                        }
+                        if(an<0 || isNaN(an)){
+                            alert("Introduceti un an valid");
+                            return false;
+                        }
+                    }
+                </script>
+                
+                
+            </td>
+        </tr>
+    </table>
+    <script>
+        const dataAzi = new Date();
+        const numeLuna = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"];
+        const numeZi = ["Luni", "Marti", "Miercuri", "Joi", "Vineri", "Sambata", "Duminica"];
+
+        let luna=dataAzi.getMonth();
+        let an=dataAzi.getFullYear();
+        function calendar() {
+    document.getElementById("luna").innerHTML = numeLuna[luna] + ' ' + an;
+
+    const calendarDate = document.getElementById("date");
+    calendarDate.innerHTML = "";
+
+    const primaZi = new Date(an, luna, 1).getDay();
+    const zileInLuna = new Date(an, luna + 1, 0).getDate();
+
+    let zi = 1;
+    const numarTotalRanduri = Math.ceil((zileInLuna + primaZi) / 7);
+
+    for (let i = 0; i < numarTotalRanduri; i++) {
+        for (let j = 0; j < 7; j++) {
+            const ziCasuta = document.createElement("div");
+            ziCasuta.classList.add("data");
+            if (i === 0 && j < primaZi-1) {
+                calendarDate.appendChild(ziCasuta);
+                continue;
+            }
+            if (zi <= zileInLuna) {
+                ziCasuta.textContent = zi;
+                calendarDate.appendChild(ziCasuta);
+                zi++;
+            }
+        }
+    }
+}
+        calendar();
+        function calendar_precedent(){
+            luna--;
+            if(luna<0){
+                luna=11;
+                an--;
+            }
+            calendar();
+        }
+        function calendar_urmator(){
+            luna++;
+            if(luna>11){
+                luna=0;
+                an++;
+            }
+            calendar();
+        }
+   </script>
+</body>
+</html>

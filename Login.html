@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li> <img  src="logo.png" alt="Logo" width="60" height="50"> </li>
+            <li><a class="active" href="Home.html">Home</a></li>
+            <div class="dropdown">
+                <a class="dropbtn">Evenimente</a>
+                <div class="meniu-dropdown">
+                    <a href="Evenimente.html">Evenimente</a>
+                    <a href="Stergere_eveniment.html">Stergere_eveniment</a>
+                    <a href="Editare_evenimente.html">Editare eveniment</a>
+                </div>
+            </div>
+           
+            <li><a href="Login.html">Login</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <div class="login">
+        <form action="login.php" method="post">
+            <h3>Logare</h3>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username">
+            <br>
+            <br>
+            <br>
+            <label for="parola">Parola</label>
+            <input type="password" id="parola" name="password">
+            <br>
+            <button type="submit" class="conect">Conectare</button>
+            <div class="inregistrare">
+                <h4>Nu aveți un cont?</h4>
+                <button type="button" ><a href="Inregistrare.html" >Înregistrare</a></button>
+            </div>
+            
+            
+            
+        </form>
+    </div>
+</body>
+</html>

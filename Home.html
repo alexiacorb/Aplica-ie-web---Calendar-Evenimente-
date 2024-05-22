@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar planificare evenimente</title>
+    <link rel="stylesheet" href="html.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li> <img src="logo.png" alt="Logo" width="60" height="50"> </li>
+            <li><a class="active" href="Home.html">Home</a></li>
+            <li class="dropdown">
+                <a class="dropbtn">Evenimente</a>
+                <div class="meniu-dropdown">
+                    <a href="Evenimente.html">Adaugare evenimente</a>
+                    <a href="Stergere_eveniment.html">Stergere evenimente</a>
+                    <a href="Editare_evenimente.html">Editare eveniment</a>
+                </div>
+            </li>
+            <li><a href="Vizualizare.html">Vizualizare</a></li>
+            <li><a href="Login.html">Login</a></li>
+        </ul>
+    </nav>
+    <h2>Visurile devin realitate! Participa la evenimentele dorite, iar noi ne asiguram de planificarea timpului!</h2>
+    <br>
+    <div class="slideshow-container">
+        <img class="mySlides" src="Login.jpg" class="poze" alt="Slide 1">
+        <img class="mySlides" src="carusel3.png" class="poze" alt="Slide 2">
+        <img class="mySlides" src="carusel2.jpg" class="poze" alt="Slide 3">
+    </div>
+      
+      <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); 
+      }
+      </script>
+    <br>
+    <br>
+    <h2>Despre noi</h2>
+    <h3 class="txt">Bine ați venit la Calendarul Planificare Evenimente, locul unde visurile devin realitate și fiecare moment devine memorabil! Suntem o echipă pasionată de evenimente și de arta planificării, dedicată să vă ajute să transformați fiecare ocazie într-o experiență de neuitat.</h3>
+    <h3 class="txt">Misiunea noastră este simplă - să vă oferim o platformă simplă și eficientă pentru planificarea și gestionarea evenimentelor personale și de afaceri. Ne străduim să vă oferim instrumentele și resursele necesare pentru a vă organiza și a vă bucura de fiecare moment special din viața dumneavoastră.</h3>
+    <h3 class="txt">Ce ne diferențiază este pasiunea noastră pentru detalii și angajamentul nostru față de satisfacția utilizatorilor. Cu o interfață intuitivă și caracteristici inovatoare, vă oferim posibilitatea de a vă personaliza experiența și de a vă transforma visele în realitate.</h3>
+    <h2>Vizualizați evenimentele anului</h2>
+    <br>
+    <div class="row">
+        <div class="card">
+            <img src="ianuarie.png" alt="Luna ianuarie" style="width:100%">
+            <div class="container"> 
+                <p><button>Evenimente ianuarie</button></p>
+            </div>
+       </div>
+       <div class="card">
+            <img src="februarie.png" alt="Luna ianuarie" style="width:100%">
+            <div class="container"> 
+                <p><button>Evenimente februarie</button></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="martie.png" alt="Luna ianuarie" style="width:100%">
+            <div class="container"> 
+                <p><button>Evenimente martie</button></p>
+            </div>
+       </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="card">
+            <img src="aprilie.png" alt="Luna ianuarie" style="width:100%">
+            <div class="container"> 
+                <p><button>Evenimente aprilie</button></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="mai.png" alt="Luna ianuarie" style="width:100%">
+            <div class="container"> 
+                <p><button>Evenimente mai</button></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="iunie.png" alt="Luna ianuarie" style="width:100%">
+            <div class="container"> 
+                <p><button>Evenimente iunie</button></p>
+            </div>
+        </div>
+    </div>
+    <h2>Editati panoul de evenimentele </h2>
+    <h3 class="txt">Cu un simplu clic, puteți adăuga evenimente noi în panoul dvs. de evenimente. Indiferent dacă este vorba despre o petrecere surpriză, o întâlnire de afaceri sau o vacanță de vis, puteți introduce detalii complete pentru a vă asigura că fiecare detaliu este perfect planificat.</h3>
+    <h3 class="txt" >V-am făcut curioși, nu-i așa ? </h3>
+    <p class="txt">
+        Pentru a trece la acțiune vă invităm în pagina
+        <a href="Evenimente.html" id="eveniment-link" onmouseover="changecolor()" onmouseout="resetColor()" onclick="event()">Adaugati evenimente</a>    
+    </p>
+       
+
+<script>
+        function event() {
+          window.location.href = "Evenimente.html";
+        }
+      
+        function changecolor() {
+          document.getElementById("eveniment-link").style.backgroundColor = "#FFC0CB";
+          document.getElementById("eveniment-link").style.color="#111";
+        }
+      
+        function resetColor() {
+          document.getElementById("eveniment-link").style.backgroundColor = "#111";
+          document.getElementById("eveniment-link").style.color = "#FFFF";
+        }
+</script>
+</body>
+</html>
