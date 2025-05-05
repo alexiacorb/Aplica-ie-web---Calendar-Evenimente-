@@ -1,4 +1,7 @@
-**Aplicație Web - Calendar Evenimente**
+                                                                      **Aplicație Web - Calendar Evenimente**
+
+
+                                                                      
 
 **Descriere**
 Acesta este un proiect de aplicație web destinată gestionării evenimentelor, implementat folosind PHP, CSS și HTML. Aplicația permite utilizatorilor să vizualizeze, adauge și editeze evenimente într-un calendar interactiv, cu funcționalități de administrare și acces restricționat pentru anumite acțiuni.
