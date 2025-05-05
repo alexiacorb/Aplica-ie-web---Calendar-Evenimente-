@@ -20,3 +20,11 @@ Acesta este un proiect de aplicație web destinată gestionării evenimentelor, 
 - **Editarea Evenimentelor** : Permite actualizarea detaliilor evenimentelor existente.
 
 Autentificare: Acces controlat pentru administratori și utilizatori, fiecare având permisiuni specifice.
+
+## Instalare
+
+Pentru a rula aplicația pe serverul tău local sau pe un server web, urmează pașii de mai jos:
+
+1. Clonează repository-ul:
+   ```bash
+   git clone https://github.com/alexiacorb/Aplicatie-web---Calendar-Evenimente.git
