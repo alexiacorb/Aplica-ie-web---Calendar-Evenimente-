@@ -19,7 +19,7 @@ Acesta este un proiect de aplicație web destinată gestionării evenimentelor, 
 
 - **Editarea Evenimentelor** : Permite actualizarea detaliilor evenimentelor existente.
 
-Autentificare: Acces controlat pentru administratori și utilizatori, fiecare având permisiuni specifice.
+- **Autentificare**: Acces controlat pentru administratori și utilizatori, fiecare având permisiuni specifice.
 
 ## Instalare
 
@@ -28,3 +28,15 @@ Pentru a rula aplicația pe serverul tău local sau pe un server web, urmează p
 1. Clonează repository-ul:
    ```bash
    git clone https://github.com/alexiacorb/Aplicatie-web---Calendar-Evenimente.git
+
+## Cum funcționează
+Aplicația utilizează un sistem de baze de date pentru a stoca informațiile despre evenimente. Structura de bază a aplicației include fișiere PHP pentru gestionarea logicii de afaceri și fișiere CSS pentru stilizarea paginilor web.
+
+## Fisiere Cheie:
+- **index.php**: Pagina principală cu calendarul.
+
+-- **addevent.php**: Formularul pentru adăugarea unui nou eveniment.
+
+-- **editEvent.php**: Formularul pentru editarea unui eveniment existent.
+
+-- **style.css**: Fișierul de stiluri care personalizează designul aplicației.
